@@ -1,0 +1,58 @@
+@import "../utilities/variables";
+
+
+
+.w-comment-create{
+  width: 100%;
+  margin-top: 20px;
+  .w-comment-content{
+    padding-bottom: 25px;
+  }
+
+  #comm-create-area{
+    width: 100%;
+  }
+}
+
+#w-comments-cont{
+  width: 100%;
+  margin-top: 16px;
+  .w-comment-elem{
+    margin-bottom: 16px;
+  }
+}
+
+.w-comment-elem{
+  display: flex;
+  justify-content: space-between;
+
+  .w-comment-author{
+    flex-shrink: 0;
+  }
+
+  .w-comment-content{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+    width: 100%;
+
+    .w-comment-header{
+      margin-bottom: 3px;
+      .w-comm-published{
+        color: $black-mono_-2;
+        vertical-align: text-top;
+      }
+    }
+
+    .comm-text{
+      // line-height: 1.25em;
+    }
+
+    #w-comment-post-btn{
+      right: 0;
+      position: absolute;
+      margin-top: 8px;
+      display: none;
+    }
+  }
+}

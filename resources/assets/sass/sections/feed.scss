@@ -1,0 +1,76 @@
+@import "../utilities/variables";
+@import "../responsive/feed";
+
+#feed-cont{
+  margin-top: 24px;
+  display: inline-block;
+  width: 100%;
+}
+
+.feed-left{
+  float: left;
+  display: inline-block;
+  width: 840px;
+  .feed-list{
+    width: 100%;
+
+    li{
+      border-bottom: 1px solid $grey-mono_1-5;
+      padding-bottom: 28px;
+      margin-bottom: 24px;
+      &:last-child{
+        padding-bottom: 0px;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.feed-right{
+  float: right;
+  display: inline-block;
+  width: 250px;
+
+  .feed-right-row{
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .feed-right-title{
+    margin-bottom: 10px;
+  }
+
+  .feed-right-more{
+    margin-top: 14px;
+    display: block;
+  }
+
+  .feed-follows-inner{
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    .feed-follows-list{
+      flex: 1;
+      overflow: hidden;
+
+      .feed-follows-li{
+        margin-bottom: 8px;
+        width: 100%;
+
+        .feed-follows-avatar{
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 6px;
+        }
+
+        .feed-follows-name{
+          display: inline-block;
+        }
+        &:last-child{
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}

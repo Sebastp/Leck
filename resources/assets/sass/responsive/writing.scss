@@ -1,0 +1,73 @@
+@import "../utilities/variables";
+
+@media only screen and (max-width: 950px) {
+  .w-down-cont{
+    .w-down-inner{
+      flex-direction: column-reverse;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 782px;
+      box-sizing: border-box;
+
+      &.container__1{
+        max-width: none;
+        padding: 0;
+      }
+      .container__1{
+        padding: 0 16px;
+      }
+    }
+
+    .w-down-left{
+      padding-right: 0;
+      width: 100%;
+    }
+
+    .w-down-right{
+      width: 100%;
+      .w-recom-cont{
+        overflow-x: scroll;
+        padding-bottom: 8px;
+        #recomended-list{
+          flex-direction: row;
+          li{
+            margin-right: 8px;
+            margin-bottom: 0px;
+
+            &:first-child{
+              margin-left: 16px;
+            }
+
+            &:last-child{
+              margin-right: 16px;
+            }
+          }
+        }
+
+        &::-webkit-scrollbar{
+          width: calc(100% - 32px);
+        }
+
+        &::-webkit-scrollbar-track{
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .w-down-inner{
+    padding: 0 16px;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  #w-modal-more{
+    #more-inner-content{
+      padding: 0;
+    }
+
+  }
+}

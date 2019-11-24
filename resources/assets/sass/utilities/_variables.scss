@@ -1,0 +1,39 @@
+@import "/colors";
+
+
+// fonts
+$f1: "Roboto", sans-serif;
+$f2: "Open Sans", sans-serif;
+$f3: "Montserrat", sans-serif;
+$f4: "Georgia", serif;
+
+//font weight
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+
+//shadows
+$bx-shadow__1: 0px 5px 15px -1px rgba(0, 0, 0, 0.08);
+
+
+//Grid
+
+//Spacing
+
+$grd-spc_horiz_item: 15px; //book list item small
+$grd-spc_horiz_elem: 25px; //book img and desc
+$grd-spc_horiz_sec: 30px; // profile main and right col, books big
+
+$grd-spc_vertic_item_head_sml: 9px; //book small title and img
+$grd-spc_vertic_item_desc: 10px; //book list item small title and desc
+$grd-spc_vertic_item_head_bg: 15px; //book BIG title and img
+$grd-spc_vertic_elem: 20px; //section title and book item img
+$grd-spc_vertic_sec: 30px; //topnav and book list
+
+
+$topbar-height__0: 65px;

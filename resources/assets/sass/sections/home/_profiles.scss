@@ -1,0 +1,34 @@
+@import "../../utilities/variables";
+
+
+.hm-section__profiles{
+  margin-bottom: 50px !important;
+
+  .profile-hor-grid{
+    display: flex;
+    width: 100%;
+  }
+
+  .hm-sect-top{
+    margin-bottom: 36px;
+  }
+
+  .hm-profiles-mid{
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .profile-grid-itm{
+    margin-right: 0px !important;
+    margin-bottom: 3px !important;
+    flex-basis: 25%;
+
+    .w-follow-btn{
+      margin-top: 6px;
+    }
+  }
+}

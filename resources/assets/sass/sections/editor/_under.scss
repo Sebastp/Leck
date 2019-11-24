@@ -1,0 +1,59 @@
+@import "../../utilities/variables";
+@import "../../partials/comments-0";
+
+
+.w-down-cont{
+  padding: 16px 0 20px 0;
+  min-height: 250px;
+  box-sizing: border-box;
+  display: block;
+
+  .w-down-inner{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    .w-down-empty{
+      display: block;
+      margin-top: 70px;
+      text-align: center;
+    }
+  }
+
+
+  .w-down-left{
+    display: inline-block;
+    width: calc(100% - 325px);
+    box-sizing: border-box;
+
+    &.container__1{
+      padding: 0;
+      padding-right: 30px;
+    }
+  }
+
+
+  .w-down-right{
+    display: inline-block;
+    width: 325px;
+
+    .container__1{
+      padding: 0;
+    }
+
+    .w-recom-cont{
+      margin: 16px 0;
+      width: 100%;
+
+      #recomended-list{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        li{
+          flex-shrink: 0;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}

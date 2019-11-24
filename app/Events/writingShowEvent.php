@@ -1,0 +1,39 @@
+<?php
+
+namespace leck\Events;
+
+use Illuminate\Broadcasting\Channel;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Broadcasting\PrivateChannel;
+use Illuminate\Broadcasting\PresenceChannel;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+
+
+
+class writingShowEvent
+{
+    use Dispatchable, InteractsWithSockets, SerializesModels;
+    public $writing;
+
+    /**
+     * Create a new event instance.
+     *
+     * @return void
+     */
+    public function __construct($writing)
+    {
+       $this->writing = $writing;
+    }
+
+    /**
+     * Get the channels the event should broadcast on.
+     *
+     * @return Channel|array
+     */
+    public function broadcastOn()
+    {
+        return new PrivateChannel('channel-name');
+    }
+}

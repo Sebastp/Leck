@@ -1,0 +1,164 @@
+@import "../utilities/variables";
+
+.signs-cont{
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.signs-form, .signs-left{
+  max-width: 360px;
+}
+
+.signs-left, .signs-right{
+  display: inline-block;
+  white-space: normal;
+  vertical-align: middle;
+}
+
+.signs-left{
+  margin-right: 40px;
+
+  .signs-left-header{
+    margin-bottom: 10px;
+  }
+}
+
+#sign-up{
+  .signs-right{
+    border-left: 2px solid $grey-mono_1-5;
+    padding-left: 40px;
+    margin-left: -4px;
+  }
+}
+
+.signs-right-header{
+  margin-bottom: 16px;
+
+  *{
+    display: inline-block;
+  }
+  .signs-right-header__sub{
+    margin-left: 5px;
+
+    span{
+      margin-right: 3px;
+      font-size: 15px;
+    }
+  }
+}
+
+.signs-inpt-cont{
+  margin-bottom: 16px;
+
+  .signs-inpt__text{
+    padding-bottom: 4px;
+    width: 100%;
+
+    &::-webkit-input-placeholder {
+      color: $grey-mono_0-5;
+      font-weight: 400;
+    }
+  }
+}
+
+
+.signs-btn-submit{
+  display: block;
+  width: 100%;
+  background-color: $main-mono_-1;
+  color: #fff;
+  transition: background-color 0.2s, color 0.3s;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  margin: 16px auto 12px auto;
+
+  &:hover{
+    color: $grey-mono_4;
+    background-color: $main-flag;
+    transition: background-color 0.4s, color 0.3s;
+  }
+
+  /*&[disable=true]{
+    color: $main-mono_-4;
+    transition: color 0.3s;
+  }*/
+}
+
+.signs-btn-neutral{
+  opacity: 0.9;
+  transition: 0.2s opacity;
+  cursor: pointer;
+
+  &:hover{
+    opacity: 1;
+    transition: 0.3s opacity;
+  }
+}
+
+#termsPPtext{
+  a{
+    text-decoration: underline;
+  }
+}
+
+#signs-remember__text{
+  white-space: nowrap;
+  margin-left: 25px;
+  margin-top: 2px;
+}
+
+#signs-forgot{
+  display: block;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+
+
+//modal
+
+.signs-modal{
+  .signin-modal-cont{
+    display: inline-block;
+    padding: 50px 35px;
+  }
+
+  #sign-in{
+    display: inline-block;
+    // background-color: #fff;
+
+    #sign-in-bottom{
+      // display: none;
+    }
+  }
+}
+
+//media
+
+@media only screen and (max-width: 900px) {
+  .signs-right, .signs-left{
+    display: block;
+    margin: auto;
+  }
+
+  .signs-left{
+    margin-bottom: 36px;
+  }
+
+  .signs-right{
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+
+  #sign-up{
+    .signs-right{
+      margin-left: 0px;
+    }
+  }
+}

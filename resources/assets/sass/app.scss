@@ -1,0 +1,27 @@
+// Variables
+@import "utilities/variables";
+
+
+
+// normalize
+@import "vendor/normalize";
+@import "vendor/grid";
+@import "vendor/typography";
+
+
+// partials
+@import "partials/boxes";
+@import "partials/buttons";
+@import "partials/inputs";
+@import "partials/writings";
+@import "partials/profiles";
+@import "partials/modals";
+
+
+//seaction
+@import "sections/topbar.scss";
+@import "sections/main.scss";
+
+
+//responsive
+@import "responsive/main.scss";

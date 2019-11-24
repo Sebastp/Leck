@@ -1,0 +1,409 @@
+.topbar-height{
+  height: $topbar-height__0;
+}
+
+.topbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  // box-sizing: border-box;
+  border-bottom: 1px solid $grey-mono_1-5;
+  background-color: #fff;
+  z-index: 1000000;
+
+  &.topbar-cont__clear{
+    border-bottom: none;
+    height: 80px;
+
+    .topbar-cont{
+      position: relative;
+
+      .topbar-back2{
+        top: 18px;
+        position: absolute;
+        p{
+          transition: 0.4s color;
+        }
+
+        &:hover{
+          p{
+            color: $black-mono_-1-8 !important;
+            transition: 0.4s color;
+          }
+        }
+      }
+    }
+
+    .topbar-logo-cont{
+      top: -1px;
+      transform: none;
+    }
+  }
+
+  &.topbar_still{
+    position: relative;
+  }
+}
+
+.topbar-placeholder{
+  display: block;
+}
+
+
+.topbar-cont{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
+
+  &.topbar-cont__center{
+    display: flex;
+    flex-direction: column;
+
+    .topbar-header{
+      width: auto;
+      margin: auto;
+    }
+  }
+}
+
+.topbar-start_full{
+  height: 80px;
+
+  .topbar-usr__drpdwn-cont{
+    margin-top: 80px;
+  }
+}
+
+.topbar-header{
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  min-width: 0;
+  flex: 1;
+  padding-right: 18px;
+
+  .topbar-logo-cont{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    top: 49%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  .logoType-anachor{
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 12px;
+  }
+
+  .logo-text{
+    display: inline-block;
+    font-family: $f3;
+    font-weight: $regular;
+    font-size: 21px;
+    opacity: 0.8;
+    vertical-align: middle;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+  }
+
+  .logo-text_1{
+    @extend .logo-text;
+    font-size: 24px;
+  }
+
+  #topbar-logo-divstr{
+    display: inline-block;
+    position: relative;
+    margin: 0 12px 0 10px;
+    vertical-align: middle;
+    height: 28px;
+    width: 2px;
+    background-color: $grey-mono_0;
+    cursor: default;
+  }
+
+  .topbar-logo-subtitle{
+    position: relative;
+    vertical-align: middle;
+    cursor: default;
+    display: inline-block;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .topbar-logo-subtitle_0{
+    @extend .topbar-logo-subtitle;
+    font-size: 18px;
+  }
+
+}
+
+.logoType{
+  display: block;
+  width: auto;
+  height: 31px;
+  fill: $main-mono_-1;
+}
+
+//logos
+
+.logoType_1{
+  @extend .logoType;
+  height: 38px;
+}
+
+.logo-col__1{
+  fill: $black-mono_-2 !important;
+}
+
+.logoType_2{
+  @extend .logoType;
+  height: 41px;
+}
+
+
+#logoGrad_1, #logoGrad_2, #logoEditor_gray{
+  opacity: 0;
+}
+
+#logoGrad_1, #logoGrad_2{
+  transition: opacity 0.3s;
+}
+
+#logoEditor_saved{
+  opacity: 1;
+}
+
+
+
+.logoGrad-load{
+  #logoGrad_1, #logoGrad_2{
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+  #logoGrad_2{
+    animation: pulseLogo 3s linear infinite;
+  }
+
+  #logoEditor_gray{
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+}
+
+.logo-unsaved{
+  #logoEditor_gray{
+    opacity: 1;
+  }
+
+  #logoEditor_saved{
+    opacity: 0;
+    // transition: opacity 0.1s;
+  }
+
+  #logoGrad_1, #logoGrad_2{
+    opacity: 0;
+  }
+}
+
+
+@keyframes pulseLogo {
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+
+
+#topbar-right{
+  height: 100%;
+  display: flex;
+  user-select: none;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+#topbar-action__right-cont{
+  margin-right: 21px;
+  flex-shrink: 0;
+  .tpbar-action__right{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 8px;
+
+    .icon__1{
+      width: auto;
+      height: 21px;
+      stroke: $black-mono_-1-5;
+      display: block;
+      transition: stroke 0.2s;
+
+      &:hover{
+        stroke: $black-mono_-1;
+        transition: stroke 0.3s;
+      }
+    }
+  }
+
+  .w-tree-icon{
+    top: 50% !important;
+    opacity: 0.85;
+    z-index: 1;
+    svg{
+      circle, line{
+        stroke: $black-mono_-1-5;
+        transition: stroke 0.2s;
+      }
+      display: block;
+      height: 20px;
+      width: auto;
+    }
+
+    &:hover{
+      svg{
+        circle, line{
+          stroke: $black-mono_-1;
+          transition: stroke 0.3s;
+        }
+      }
+    }
+  }
+
+  .w-more-icon{
+    top: 50% !important;
+    margin-right: 10px;
+    padding: 8px 0 7px 0;
+
+    svg{
+      path{
+        fill: $black-mono_-1-5;
+        transition: fill 0.2s;
+      }
+      display: block;
+      width: 27px;
+      height: auto;
+    }
+
+    &:hover{
+      svg path{
+        fill: $black-mono_-1;
+        transition: fill 0.3s;
+      }
+    }
+  }
+
+  :last-child{
+    margin-right: 0px;
+  }
+}
+
+.topbar-nav{
+  display: inline-block;
+}
+
+
+
+
+.topbar-nav-sign{
+  float: right;
+  height: 100%;
+  display: inline-block;
+  margin-left: 8px;
+
+  .topbar-nav-sign__cont{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -1px;
+  }
+
+  .topbar-nav-sign__item{
+    display: inline-block;
+  }
+
+  #topbar-nav-sign__line{
+    display: inline-block;
+    height: 23px;
+    width: 1px;
+    vertical-align: middle;
+    background-color: $grey-mono_1;
+    margin: auto 10px;
+  }
+}
+
+
+
+
+.topbar-usersec{
+  float: right;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  #topbar-usersec__avatar{
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.topbar-usr__drpdwn-cont{
+  right: 0;
+  left: auto;
+  margin-top: $topbar-height__0;
+  top: -10px;
+  width: 280px;
+
+  popup-box-inner{
+    padding-top: 0px;
+  }
+
+  .topbar-usersec-li{
+    box-sizing: border-box;
+  }
+
+  .topbar-usersec-divline{
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: $grey-mono_2;
+    margin-top: 4px;
+    margin-bottom: 2px;
+  }
+
+  .topbar-usersec-top{
+    background-color: $grey-mono_2;
+    margin-bottom: 8px;
+
+    #topbar-usersec-top-inner{
+      padding: 10px 16px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      #topbar-usersec__name{
+        margin-left: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

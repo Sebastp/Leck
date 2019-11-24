@@ -1,0 +1,283 @@
+@import "../../utilities/variables";
+
+.split-cont{
+  width: 100%;
+  margin-top: 60px;
+  max-width: 782px;
+  box-sizing: border-box;
+  padding: 0;
+  word-wrap: break-word;
+}
+
+
+
+
+.split-inner-list{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.split-item__label{
+  color: $grey-mono_1;
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.split-item__title{
+  display: inline-block;
+  margin-left: 8px;
+  word-break: break-all;
+  line-height: 1.1em;
+}
+
+.item__title-plc-empty:empty:after{
+  color: $negative_1 !important;
+}
+
+
+
+.split-center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .split-item__label{
+    margin-top: 2px;
+  }
+}
+
+
+
+.split-li{
+  box-sizing: border-box;
+  // padding: 0px 16px;
+  padding: 0px 21px;
+  border-left: #fff solid 1px;
+  border-right: #fff solid 1px;
+  &.split-brdrdiv{
+    border-right: $grey-mono_1 solid 1px;
+  }
+}
+
+
+.split-item{
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 16px;
+
+  .split-item__title{
+    position: relative;
+    width: 100%;
+  }
+
+  .split-rightup{
+    z-index: 100;
+    height: 24px;
+    width: 9px;
+    top: 0px;
+    right: 3px;
+    position: absolute;
+    transition: 0.15s opacity;
+    cursor: pointer;
+    z-index: 10000;
+
+    .split-rightup-btn{
+      opacity: 0;
+      width: 100%;
+    }
+
+    svg{
+      display: block;
+      height: auto;
+      width: 4px;
+      opacity: 1;
+      path{
+        transition: 0.2s opacity;
+        fill: $grey-mono_0-75;
+      }
+    }
+
+    &:hover{
+      .split-rightup-btn{
+        svg path{
+          transition: 0.15s fill;
+          fill: $grey-mono_0;
+        }
+      }
+    }
+  }
+
+  .split-bottom{
+    width: 100%;
+    // padding-left: 21px;
+    margin-top: 6px;
+    box-sizing: border-box;
+
+    .split-bottom-dot{
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      margin-right: 8px;
+      float: left;
+      display: inline-block;
+      margin-top: 7px;
+      cursor: pointer;
+      border-radius: 500px;
+      opacity: 0;
+      background-color: $grey-mono_1-5;
+      transition: opacity 0.15s;
+    }
+
+    input{
+      width: calc(100% - 34px); //16
+      float: left;
+      &::-webkit-input-placeholder {
+        color: $grey-mono_0-75;
+      }
+    }
+
+    .split-bottom-arrow{
+      height: auto;
+      display: inline-block;
+      float: right;
+      width: 16px;
+      opacity: 0.15;
+      cursor: pointer;
+      transition: 0.2s opacity;
+      &:hover{
+        transition: 0.2s opacity;
+        opacity: 0.3;
+      }
+
+      &.split-arrow-active{
+        transform: rotate(180deg);
+        transform-origin: 50% 50%;
+      }
+    }
+
+    leck-popup-cont{
+      top: inherit;
+      width: 100%;
+
+      .split-drpdwn-itm{
+        user-select: none;
+      }
+    }
+  }
+
+
+  .popup__drpdwn-cont{
+    padding-left: 33px;
+    padding-right: 18px;
+    margin-top: 25px;
+    box-sizing: border-box;
+  }
+
+  &:hover{
+    .split-rightup-btn{
+      transition: 0.2s opacity;
+      opacity: 1;
+    }
+
+    .split-bottom-dot{
+      transition: opacity 0.2s;
+      opacity: 1;
+    }
+  }
+
+  .scrlbar-1{
+    max-height: 200px;
+  }
+
+  &.split-visible{
+    .split-bottom-dot{
+      background-color: $main-mono_-1;
+      opacity: 0.8;
+      transition: opacity 0.15s;
+    }
+    &:hover{
+      .split-bottom-dot{
+        transition: opacity 0.2s;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+
+.split-empty{
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+
+  span{
+    margin-top: 1px;
+    margin-left: 8px;
+    color: #000;
+  }
+  svg{
+    width: 24px;
+    height: auto;
+  }
+  span, svg{
+    opacity: 0.4;
+    transition: color 0.2s, opacity 0.2s, fill 0.2s;
+    vertical-align: middle;
+  }
+
+  &:hover{
+    span, svg{
+      fill: $main-mono_-3;
+      color: $main-mono_-3;
+      opacity: 1;
+      transition: color 0.3s, opacity 0.3s, fill 0.3s;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+.w-split-inner-list{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+
+
+.w-split-item{
+  box-sizing: border-box;
+  padding: 10px 16px;
+  cursor: pointer;
+
+
+  &.w-split-item__pos{
+    .split-item__label{
+      color: $main-mono_-2;
+    }
+  }
+
+  &.w-split-item__neg{
+    cursor: default;
+    opacity: 0.55;
+  }
+}

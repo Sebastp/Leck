@@ -1,0 +1,50 @@
+@import "../utilities/variables";
+
+
+.pop-sect{
+  margin-bottom: 15px;
+  .pop-sect-top{
+    width: 100%;
+    display: block;
+
+    .pop-sect-name{
+      display: inline-block;
+    }
+
+    .pop-sect-more{
+      display: inline-block;
+      float: right;
+      margin-top: 2px;
+    }
+  }
+
+
+  .pop-list{
+    margin-top: 16px;
+    list-style: none;
+    display: inline-block;
+    width: calc(100% + 10px);
+
+    li{
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 25px;
+    }
+
+    .pop-li__profile{
+      display: inline-block;
+      width: 265px;
+    }
+  }
+
+  .hm-sect-grid{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &:after {
+      content: "";
+      width: 265px;
+    }
+  }
+}

@@ -1,0 +1,297 @@
+@import "utilities/variables";
+@import "../vendor/typography";
+
+.neutralize-btn{
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.btn-empty-neutral{
+  @extend .f1_sysinf-1;
+  color: $grey-mono_0-25;
+  transition: color 0.3s;
+  &:hover{
+    color: $grey-mono_-1;
+    transition: color 0.3s;
+  }
+}
+
+.btn-empty-positiv{
+  @extend .f1_usrname_0;
+  color: $main-flag;
+  transition: color 0.3s;
+  &:hover{
+    color: $main-mono_-1;
+    transition: color 0.3s;
+  }
+
+  &[disable=true]{
+    color: $main-mono_-4;
+    transition: color 0.3s;
+  }
+}
+
+
+.btn-empty-destr{
+  @extend .f1_usrname_0;
+  color: $black-mono_-1-8;
+  transition: color 0.3s;
+  &:hover{
+    color: $font-col_ttls;
+    transition: color 0.3s;
+  }
+
+  &[disable=true]{
+    color: $main-mono_-4;
+    transition: color 0.3s;
+  }
+}
+
+
+
+.btn-more__medium{
+  background: none;
+  border: none;
+  display: inline-block;
+  svg{
+    width: 22px;
+    height: auto;
+    fill: $grey-mono_1;
+  }
+  &:hover{
+    svg{
+      opacity: 0.9;
+      fill: $grey-mono_0;
+    }
+  }
+}
+
+.btn-more__big{
+  @extend .btn-more__medium;
+  svg{
+    width: 25px;
+  }
+}
+
+
+.btn-action__0{
+  @extend .neutralize-btn;
+  box-sizing: border-box;
+  border-radius: 1000px;
+  background-color: $main-flag;
+  background: linear-gradient(to right, #0f72f9 0%, #3699fb 100%);
+  padding: 6px 30px 5px 30px;
+  font-size: 14px;
+  font-family: $f1;
+  font-weight: $medium;
+  color: $font-col_light;
+  letter-spacing: 0.03em;
+
+  &:after{
+    content: 'Follow';
+  }
+
+  &.btn-action-half{
+    @extend .neutralize-btn;
+    color: $grey-mono_0-5;
+    background: none;
+    border: 1px solid $grey-mono_1;
+    border-radius: 1000px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: $f1;
+    font-weight: $medium;
+    padding: 5px 24px 4px 24px;
+
+    &:after{
+      content: 'Following';
+    }
+  }
+}
+
+
+
+.btn-action__1{//follow text
+  @extend .neutralize-btn;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: $f1;
+  font-weight: $medium;
+  color: $main-flag;
+  letter-spacing: 0.03em;
+  transition: color 0.15s;
+
+  &:after{
+    content: 'Follow';
+  }
+
+  &:hover{
+    transition: color 0.2s;
+    color: $main-mono_1;
+  }
+
+
+  &.btn-action-half{
+    @extend .neutralize-btn;
+    color: $grey-mono_0-5;
+    font-size: 15px;
+    font-family: $f1;
+    font-weight: $medium;
+    transition: color 0.2s;
+
+    &:after{
+      content: 'Following';
+    }
+
+    &:hover{
+      transition: color 0.2s;
+      color: $grey-mono_0-25;
+    }
+  }
+}
+
+
+
+
+
+
+
+.btn-action__2{ // black
+  @extend .neutralize-btn;
+  box-sizing: border-box;
+  border-radius: 1000px;
+  background: $black-mono_0;
+  padding: 6px 25px 5px 25px;
+  font-size: 14px;
+  font-family: $f1;
+  font-weight: $regular;
+  color: $grey-mono_2;
+  transition: background-color 0.3s, color 0.3s;
+  &:hover{
+    background-color: $black-mono_-1;
+    color: $grey-mono_1-5;
+    transition: background-color 0.4s, color 0.4s;
+  }
+}
+
+
+.btn-rounded{
+  @extend .brdr;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 1000px;
+}
+
+
+
+
+
+//like
+.like-container{
+  position: relative;
+  user-select: none;
+
+  .like-btn{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 1000px;
+    border: 1px solid $grey-mono_1;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color 400ms;
+
+    svg{
+      fill: $love-col;
+      fill: none;
+      stroke: $love-col;
+      width: auto;
+      height: 24px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 50%;
+      margin-top: -11px;
+      z-index: 1;
+      transition: fill 100ms;
+    }
+
+
+
+    .like-btn-fullbcg{
+      border-radius: 1000px;
+      z-index: 0;
+      background-color: $love-col;
+      position: absolute;
+      left: 50%;
+      width: 0%;
+      height: 0%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .like-ratebar{
+    position: absolute;
+    transform: translateY(-100%);
+    top: 5px;
+    left: 50%;
+    margin-left: -3px;
+    background-color: $grey-mono_1;
+    width: 6px;
+    height: 52px;
+    z-index: -1;
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+
+    .like-ratebar-positive{
+      width: 100%;
+      background-color: $love-col;
+      position: absolute;
+      border-radius: 8px;
+      bottom: 0;
+    }
+  }
+
+
+  &[data-likesnr='1'], &[data-likesnr='2'], &[data-likesnr='3'], &[data-likesnr='4'], &[data-likesnr='5']
+    , &[data-likesnr='6'], &[data-likesnr='7'], &[data-likesnr='8'], &[data-likesnr='9'], &[data-likesnr='10']{
+    .like-btn{
+      border-color: transparent;
+      transition: border-color 800ms;
+      svg{
+        transition: fill 300ms;
+        fill: #fff;
+      }
+
+      .like-btn-fullbcg{
+        width: 100%;
+        height: 100%;
+        transition: width 150ms, height 150ms;
+      }
+    }
+
+    .like-usr__likes{
+      display: block;
+    }
+  }
+
+  &[data-likesnr='0']{
+    .like-usr__likes{
+      display: none;
+    }
+  }
+
+  .like-usr__likes{
+    position: absolute;
+    /*left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;*/
+    margin-top: -5px;
+    top: 50%;
+    left: 100%;
+    margin-left: 10px;
+  }
+}

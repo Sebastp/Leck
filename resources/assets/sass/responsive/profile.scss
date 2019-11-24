@@ -1,0 +1,16 @@
+@import "../utilities/variables";
+
+@media only screen and (max-width: 816px) {
+  #prof-content{
+    #stories-cont{
+
+      .prof-stories-left{
+        width: 100%;
+      }
+    }
+
+    #prof-content-right{
+      display: none;
+    }
+  }
+}

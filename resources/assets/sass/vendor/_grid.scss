@@ -1,0 +1,77 @@
+@import "utilities/variables";
+
+
+//Spacing in _varibles
+
+
+//right
+.grid-hor-r__item{
+  margin-right: 15px;
+}
+
+.grid-hor-r__elem{
+  margin-right: 25px;
+}
+
+.grid-hor-r__sec{
+  margin-right: 30px;
+}
+
+
+//left
+.grid-hor-l__item{
+  margin-left: 15px;
+}
+
+.grid-hor-l__elem{
+  margin-left: 16px;
+}
+
+.grid-hor-l__sec{
+  margin-left: 30px;
+}
+
+
+
+
+.grid-ver__item{
+  margin-top: 8px;
+}
+
+.grid-ver__elem{
+  margin-top: 16px;
+}
+
+.grid-ver__desc{
+  margin-top: 10px;
+}
+
+.grid-ver__elem{
+  margin-top: 20px;
+}
+
+.grid-ver__sec{
+  margin-top: 30px;
+}
+
+
+
+
+
+.profile-hor-grid{
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  .profile-grid-itm{
+    flex-grow: 0;
+    flex-shrink: 0;
+    .profile_big-cont{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}

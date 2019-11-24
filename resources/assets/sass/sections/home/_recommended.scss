@@ -1,0 +1,26 @@
+@import "../../utilities/variables";
+
+
+.hm-section__recomm{
+  margin-bottom: 50px !important;
+
+  .hm-sect-top{
+    margin-bottom: 28px;
+  }
+}
+
+.hm-recomm-main{
+  display: block;
+
+  .hm-recomm-item{
+    margin: 40px auto;
+
+    &:first-child{
+      margin-top: 0px;
+    }
+
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+}

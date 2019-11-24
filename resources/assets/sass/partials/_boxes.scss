@@ -1,0 +1,233 @@
+@import "utilities/variables";
+
+leck-popup-cont{
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+}
+
+popup-box-inner{
+  background-color: #ffffff;
+  box-shadow: 1px 5px 6px 0px rgba(0, 0, 0, 0.07);
+  // box-shadow: 2px 6px 7px 0px rgba(0, 0, 0, 0.06);
+  // box-shadow: 2px 6px 21px rgba(0, 0, 0, 0.1);
+  border: 1px solid $grey-mono_2;
+  border-radius: 2px;
+  padding: 6px 0;
+  display: none;
+  overflow-x: hidden;
+  @extend .f1_content-1__dark;
+  ul{
+    li{
+      width: 100%;
+      padding: 4px 16px;
+      .inner-padding{
+        padding: 4px 16px;
+        width: 100%;
+      }
+      text-align: left;
+      cursor: pointer;
+
+      &.inner-padding{
+        padding: 0 !important;
+      }
+
+      .chckbx__lable-cont{
+        .inpt-chckbx__flat{
+          margin-top: 2px;
+        }
+        .chckbx__desc{
+          margin-left: 10px;
+        }
+      }
+
+      &.li__onhover{
+        &:hover{
+          color: $black-mono_-1-5;
+          background-color: $grey-mono_3;
+        }
+      }
+
+      &.li__sizing{
+        box-sizing: border-box;
+      }
+
+      .li__inner-a{
+        display: block;
+        box-sizing: border-box;
+      }
+
+    }
+  }
+
+  &.pbi__1{
+    ul{
+      li, li .inner-padding{
+        padding: 6px 16px;
+      }
+    }
+  }
+
+  .popup-loader{
+    min-height: 40px;
+    height: 100%;
+    display: none;
+
+    [popupLoad-loader], [popupLoad-failMsg]{
+      display: none;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    [popupLoad-failMsg]{
+      text-align: center;
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    &[popupLoad-show="loader"]{
+      [popupLoad-loader]{
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &[popupLoad-show="failMsg"]{
+      [popupLoad-failMsg]{
+        display: block;
+        position: absolute;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+.drpdwn-wrighr{
+  li{
+    display: flex;
+    span{
+      width: 100%;
+    }
+  }
+}
+
+
+.addto-cont{
+  popup-box-inner{
+    width: 150px;
+    border-radius: 4px;
+  }
+}
+
+
+
+
+//notif box
+@keyframes fadeOut{
+  100% {
+    opacity: 0;
+  }
+}
+
+.notif-container{
+  position: fixed;
+  z-index: 999999;
+  top: calc(16px + #{$topbar-height__0});
+  right: 3px;
+  max-height: 80vh;
+  min-height: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 405px;
+  .notif-box{
+    margin-left: 10px;
+    width: 380px;
+    background-color: rgba(56, 148, 249, 0.93); //$main-mono_-2
+    border-radius: 3px;
+    box-shadow: 0 5px 12px 1px rgba(0,0,0,0.15);
+    padding: 14px 21px 12px 21px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+
+    &.fade-notif-box{
+      animation: fadeOut 800ms;
+    }
+
+
+    .notif-box-msg{
+      color: $grey-mono_4 !important;
+      padding-right: 6px;
+    }
+
+    .notif-close{
+      float: right;
+      margin-right: -11px;
+      margin-top: -6px;
+      fill: #fff;
+      opacity: 0.85;
+      transition: opacity 0.3s;
+      cursor: pointer;
+      &:hover{
+        opacity: 0.95;
+        transition: opacity 0.4s;
+      }
+      svg{
+        width: 12px;
+        height: auto;
+      }
+    }
+  }
+}
+
+
+
+.error-popup1{
+  position: absolute;
+  top: -6px;
+  right: -14px;
+  padding: 0;
+  white-space: nowrap;
+  border: none;
+  transform: translateY(-100%);
+
+
+  .error-popup1-inner{
+    display: flex;
+    flex-direction: row;
+    min-height: 28px;
+  }
+
+  .error-popup1-left{
+    background-color: $negative_0;
+    text-align: center;
+    display: inline-block;
+    width: 28px;
+    min-width: 28px;
+    position: relative;
+
+    span{
+      color: #fff !important;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  .error-popup1-right{
+    height: 100%;
+    display: inline-block;
+    min-width: 14px;
+    padding: 8px;
+    // max-width: 220px;
+    span{
+      display: block;
+      // white-space: normal;
+    }
+  }
+}

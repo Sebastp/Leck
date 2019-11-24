@@ -1,0 +1,14 @@
+{
+  "/js/app.js": "/js/app.js",
+  "/css/app.css": "/css/app.css",
+  "/css/home.css": "/css/home.css",
+  "/css/writing.css": "/css/writing.css",
+  "/css/signs.css": "/css/signs.css",
+  "/css/feed.css": "/css/feed.css",
+  "/css/profile.css": "/css/profile.css",
+  "/css/popular.css": "/css/popular.css",
+  "/js/profile.js": "/js/profile.js",
+  "/js/d3graph.js": "/js/d3graph.js",
+  "/js/editor.js": "/js/editor.js",
+  "/js/writing.js": "/js/writing.js"
+}
